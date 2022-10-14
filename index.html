@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="LR(1) Parser" />
+    <title>LR(1) Parser</title>
+    <link rel="icon" href="favicon.ico" />
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather&family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>LR(1) Parser</h1>
+      <p>A web interface to understand and visualize the working of a LR(1) Parser</p>
+    </header>
+    <main>
+      <section>
+        <h2>Guildlines</h2>
+        <h3>Entering grammar</h3>
+        <ul>
+          <li>Each rule should be in a different line. Do not use bars.</li>
+          <li>The left-hand side of the first rule must be the start symbol.</li>
+          <li>Symbols must be separated with spaces.</li>
+          <li>Do not use arrows to separate the left and right-hand sides of a rule. Use a space.</li>
+          <li>Check out the example for further clarification.</li>
+        </ul>
+        <h3>Entering input string</h3>
+        <ul>
+          <li>String must be in a single line</li>
+          <li>Symbols must be separated by space.</li>
+          <li>Do not add an end marker at the end.</li>
+          <li>Check out the example for further clarification.</li>
+        </ul>
+        <button class="btn" type="button" id="show-example">Show Example</button>
+      </section>
+      <section>
+        <h2>Grammar</h2>
+        <textarea id="grammar-text" placeholder="Grammar"></textarea>
+        <p>
+          <button class="btn" type="button" id="create-parser">Create Parser</button>
+          <button class="btn" type="reset" id="clear">Clear</button>
+        </p>
+        <div id="grammar-container" class="container code-container"></div>
+      </section>
+      <section>
+        <h3>Collection</h3>
+        <div id="collection-container" class="container code-container"></div>
+      </section>
+      <section>
+        <h3>Parse Table</h3>
+        <div id="parse-table-container" class="container table-container"></div>
+      </section>
+      <section>
+        <h2>Parsing</h2>
+        <textarea id="input-text" placeholder="input"></textarea>
+        <p>
+          <button class="btn" type="button" id="parse">Parse</button>
+          <button class="btn" type="reset" id="clear-parsing">Clear</button>
+        </p>
+      </section>
+      <section>
+        <h3>Parse Steps</h3>
+        <div id="parse-steps-container" class="container table-container"></div>
+      </section>
+      <section>
+        <h3>Parse Tree</h3>
+        <div id="parse-tree-container" class="container tree-container"></div>
+      </section>
+    </main>
+    <footer>
+      
+    </footer>
+  </body>
+</html>
